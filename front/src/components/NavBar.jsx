@@ -13,19 +13,19 @@ export default function NavBar({ onSearch, logout }) {
   return (
     <div className={style.nav}>      
       <Link to="/home">
-        <button  className={style.navbutton}  onClick={()=> dispatch(resetCharacters())}>Home</button>
+        <button  className={style.navbutton}  onClick={()=> dispatch(resetCharacters())}>🏠Home</button>
       </Link>
       <Link to="/about">
-        <button className={style.navbutton}>About</button>
+        <button className={style.navbutton}>📌About</button>
       </Link>
       <Link to="/favorites">
-        <button className={style.navbutton}>Favorites</button>
+        <button className={style.navbutton}>❤️Favorites</button>
       </Link>
       <SearchBar onSearch={onSearch}/>
       <div>
         <img className={style.logo} src={rick} alt="rick logo"></img>
       </div>
-      <button className={style.navbutton} onClick={logout}>LogOut</button>
+      <button className={style.navbutton} onClick={logout}>⛔️LogOut</button>
     </div>
   );
 }

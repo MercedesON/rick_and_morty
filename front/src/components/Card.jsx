@@ -42,7 +42,10 @@ export default function Card(props) {
         ) : (
           <button onClick={handleFavorite}>🤍</button>
         )}
-        <button onClick={superClouse}>X</button>
+        <button onClick={superClouse}>❌</button>
+        <Link className={style.link} to={`/detail/${id}`}>
+          <button>👁‍🗨</button>
+        </Link>       
       </div>
       <Link className={style.link} to={`/detail/${id}`}>
         <h1>{name}</h1>
@@ -50,7 +53,7 @@ export default function Card(props) {
         <h2>{species}</h2>
         <h2>{gender}</h2> */}
         <h2>{origin}</h2>
-        <img src={image} alt={name} />
+        <img className={style.imgCard} src={image} alt={name} />
       </Link>
     </div>
   );

@@ -19,7 +19,7 @@ export default function SearchBar({ onSearch }) {
   return (
     <div className={style.search}>
       <input className={style.searchInput} onChange={handleChange} type="search" name="search" value={id} />
-      <button className={style.searchButton} onClick={() => onSearch(id)}>Search</button>
+      <button className={style.searchButton} onClick={() => onSearch(id)}>Search 🔎</button>
     </div>
   );
 }

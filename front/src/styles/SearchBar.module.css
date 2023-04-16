@@ -6,16 +6,16 @@
 }
 .searchInput{
     border: 10px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 12px 0px 0px 12px;
     background-color: #e0e0e0;
     height: 3em; 
     margin-top: 15px;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 .searchButton{
-    border: 30px;
-    border-radius:12px 12px 12px 12px;
+    border: 10px;
+    border-radius:0px 12px 12px 0px;
     background-color: rgb(113, 197, 113);
     height: 3em;   
     margin-top: 15px;

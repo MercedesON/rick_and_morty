@@ -4,10 +4,40 @@
     align-items: center;
   }
   
-  .detail img{
+  /*.detail img{
       width: 40%;
       height: 60vh;
       max-width: 400px;
+  }*/
+
+  .imgCard{
+    width: 40%;
+    height: 60vh;
+    max-width: 400px;
+    border-radius: 40px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: cambria;
+
+  color: hsl(162, 65%, 35%);
+  outline: 10px dashed #E0E4CC;
+  box-shadow: 0 0 0 10px hsl(162, 65%, 35%);
+  animation: 1s animateBorderOne ease infinite;
+
+  outline-color:hsl(162, 65%, 35%);
+  box-shadow: 0 0 0 10px #E0E4CC;
+}
+.imgCard:hover::after {
+    box-shadow: 0px 0px 0px 10px ;
+}
+@keyframes animateBorderOne {
+    to {
+      outline-color: #69D2E7;
+      box-shadow: 0 0 0 10px #E0E4CC;
+    }
   }
   .text_contain {
   }

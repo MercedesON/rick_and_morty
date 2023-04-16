@@ -28,7 +28,7 @@ export default function Detail() {
 
   return (
     <div className={style.detail} key={character.id}>
-      <img src={character.image} alt={character.name} />
+      <img className={style.imgCard} src={character.image} alt={character.name} />
       <div>
         <h1>{character.name}</h1>
         <h2>{character.species}</h2>
