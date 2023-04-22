@@ -16,8 +16,8 @@ export default function Favorites({ onClose }) {
     onClose(id);
     dispatch(removeFav(id));
   }
-  // Male, Female, Genderless y unknown.
-  function handleOrder(e) {    
+ 
+  function handleOrder(e) {
     e.preventDefault();
     const { name, value } = e.target;
     dispatch(orderCards(value));
@@ -36,14 +36,14 @@ export default function Favorites({ onClose }) {
     <div>
       <div className={style.nav_favorites}>
         <select onChange={handleOrder} name="order" defaultValue={"DEFAULT"}>
-          <option value="DEFAULT" disable>
+          <option value="DEFAULT" disable="true">
             Select Order
           </option>
           <option value="Ascendente">Ascendente</option>
           <option value="Descendente">Descendente</option>
         </select>
         <select onChange={handleFilter} name="filter" defaultValue={"DEFAULT"}>
-          <option value="DEFAULT" disable>
+          <option value="DEFAULT" disable="true">
             Select Filter
           </option>
           <option value="Male">Male</option>
@@ -55,10 +55,10 @@ export default function Favorites({ onClose }) {
       </div>
       <div className={style.cards_container}>
         {myFavorites &&
-          myFavorites.map((element, index) => {
+          myFavorites.map((element) => {
             return (
               <Card
-                key={index}
+                key={element.id}
                 id={element.id}
                 name={element.name}
                 status={element.status}
@@ -74,15 +74,4 @@ export default function Favorites({ onClose }) {
     </div>
   );
 }
-// function mapState(st) {
-//   return {
-//     myFavorites: st.myFavorites,
-//   };
-// }
-// function mapDispatch(d) {
-//   return {
-//     removeFav: (id) => d(removeFav(id)),
-//   };
-// }
 
-// export default connect(mapState, mapDispatch)(Favorites);

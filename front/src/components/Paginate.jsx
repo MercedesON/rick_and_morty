@@ -15,13 +15,7 @@ export default function Paginate({ cantPages }) {
   function number(n) {
     dispatch(handleNumber(n));
   }
-//   console.log("vvvv", cantPages);
   return (
-    // <div className={style.page}>
-    //   {cantPages?.map((e, i) => (
-    //     <button onClick={() => number(i + 1)}>{i + 1}</button>
-    //   ))}
-    // </div>
     <div className={style.page}>
       {numPage > 1 ? (
         <div>

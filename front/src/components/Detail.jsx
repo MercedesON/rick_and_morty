@@ -23,12 +23,12 @@ export default function Detail() {
       }
     }
     inEffect();
-    return setCharacter({}); // cuando se desmonta -> {}
+    return setCharacter({}); 
   }, [id]);
 
   return (
     <div className={style.detail} key={character.id}>
-      <img className={style.imgCard} src={character.image} alt={character.name} />
+      <img src={character.image} alt={character.name} />
       <div>
         <h1>{character.name}</h1>
         <h2>{character.species}</h2>
@@ -43,4 +43,3 @@ export default function Detail() {
     </div>
   );
 }
-

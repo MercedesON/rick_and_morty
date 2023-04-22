@@ -20,7 +20,7 @@ const initialState = {
   characters: [],
   data: [],
   myFavorites: [],
-  myFavoritesOrigin: [], // solo lo cambian el add y el remove
+  myFavoritesOrigin: [], 
 };
 
 export default function rootReducer(state = initialState, { type, payload }) {
@@ -86,9 +86,6 @@ export default function rootReducer(state = initialState, { type, payload }) {
         myFavoritesOrigin: payload,
       };
     case REMOVE_FAV:
-      // const newFavorites = state.myFavoritesOrigin.filter(
-      //   (ch) => ch.id !== payload
-      // );
       return {
         ...state,
         myFavorites: payload,

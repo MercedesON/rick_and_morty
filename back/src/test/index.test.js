@@ -3,12 +3,7 @@ const app = require("../app");
 const session = require("supertest");
 
 const request = session(app);
-// {get, post}
-// http://localhost:3001/rickandmorty/character/all
-// http://localhost:3001/rickandmorty/character/:id
-// http://localhost:3001/rickandmorty/favorite
 
-// ASYNC
 let char;
 let favs = []
 beforeAll(() => {
@@ -57,20 +52,3 @@ describe("Test Routes", () => {
   });
 });
 
-/*
-http://localhost:3001/rickandmorty/character/1
-{
-  "id": 1,
-  "status": "Alive",
-  "name": "Rick Sanchez",
-  "species": "Human",
-  "origin": "Earth (C-137)",
-  "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-  "gender": "Male",
-  "location": "Citadel of Ricks"
-}
-
-http://localhost:3001/rickandmorty/character/7777
-
-status(500)
-*/

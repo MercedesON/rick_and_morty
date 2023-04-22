@@ -119,45 +119,4 @@ function App() {
 
 export default App;
 
-/*
-Nav debe que aparecer en todas las rutas.
-Cards debe aparecer solo en la ruta /home.
-About debe aparecer solo en la ruta /about.
-Detail debe aparecer solo en la ruta /detail/:id.
-*/
 
-/*
-en el class component, como hago para dispachear al redux un state local
-
-
-import React, { Component } from 'react'
-import {connect}
-import {addForm}
-
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      form:{}
-    }
-  }
-  add = ()=>{
-    this.props.addForm(this.state.form)
-  }
-  componentDidMount
-  render() {
-    return (
-      <div>
-        <button onClick={this.add}> 
-      </div>
-    )
-  }
-}
-function mapDispatch(dis){
-  return {
-    addForm: (form)=> dis(addForm(form))
-  }
-}
-
-export default connect(mapState, mapDispatch)(App)
-*/

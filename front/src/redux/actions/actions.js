@@ -68,6 +68,7 @@ export function addFav(character) {
         `http://localhost:3001/rickandmorty/favorite`,
         character
       );
+      console.log(":::::::::data", data);
       return dispatch({
         type: ADD_FAV,
         payload: data,
@@ -90,15 +91,11 @@ export function removeFav(id) {
       );
       return dispatch({
         type: REMOVE_FAV,
-        payload: data, // myFavorites
+        payload: data, 
       });
     } catch (error) {
       console.log("removeFav not found", error);
     }
-    // return {
-    //   type: REMOVE_FAV,
-    //   payload: id,
-    // };
   };
 }
 
@@ -109,7 +106,6 @@ export function filterCards(gender) {
   };
 }
 export function orderCards(order) {
-  // A: ascendente o D: descendente
   return {
     type: ORDER,
     payload: order,
@@ -126,10 +122,4 @@ export function resetCharacters() {
   };
 }
 
-/*
-  filterCards: esta función recibe por parámetro un gender. 
-  Debe retornar una action con el type igual a "FILTER" y el payload será igual al parámetro recibido.
 
-orderCards: esta función recibe por parámetro un orden (será: A: ascendente o D: descendente). 
-Debe retornar una action con el type igual a "ORDER" y el payload será igual al parámetro recibido.
-  */
